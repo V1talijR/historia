@@ -3,75 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia europy w pierwszej połowie XX w.</title>
+    <title>Historia na mapie</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        #map {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            z-index: 0;
-        }
-
-        /* Stylizacja modalnego okna */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000; /* Wyższy z-index, aby modal był nad mapą */
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: skyblue;
-            padding: 20px;
-            border: 1px solid #888;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            width: 400px;
-            max-width: 80%;
-            font-family:"Lucida Handwriting";
-        }
-
-        .modal-content {
-            background-color: skyblue;
-        }
-
-        .close, .close-osowiec,.close-sarajewo,.close-yarmouth,.close-ieper,.close-zimowa,.close-dunkirk,.close-moskwa,.close-platte,.close-ardeny, .close-start {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus,
-        .close-osowiec:hover,
-        .close-osowiec:focus,
-        .close-sarajewo:hover,
-        .close-sarajewo:focus,
-        .close-yarmouth:hover,
-        .close-yarmouth:focus,
-        .close-ieper:hover,
-        .close-ieper:focus,
-        .close-zimowa:hover,
-        .close-zimowa:focus,
-        .close-dunkirk:hover,
-        .close-dunkirk:focus,
-        .close-moskwa:hover,
-        .close-moskwa:focus,
-        .close-platte:hover,
-        .close-platte:focus,
-        .close-ardeny:hover,
-        .close-ardeny:focus,
-        .close-start:hover,
-        .close-start:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        i{
-            font-size: 10px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="historia.css" />
 </head>
 <body>
     <div id="map"></div>
@@ -98,8 +33,7 @@
             <p>Twierdza w Polsce, znana z walk podczas I wojny światowej. Była miejscem heroicznej obrony wojsk rosyjskich.
                 6 sierpnia 1915 r. wojska Niemieckie użyły mieszaniny gazu chloru i bromu, w wyniku czego umarło ok. 800 żołnierzy rosyjskich. Reszta która przeżyła rzuciła się
                 do walki. Wydarzenie to zostało nazwane tak, ponieważ Niemcy nie spodziewali się oporu, oprócz tego byli przerażeni widokiem Rosjan, którzy kaszleli krwią.
-                <br><img src="Osowiec1.jpg" alt="Twierdza Osowiec" style="width: 300px; height: 200px;">
-                <br><img src="Osowiec2.jpg" alt="Twierdza Osowiec" style="width: 300px; height: 200px;">
+                <br><img src="Osowiec1.jpg" alt="Twierdza Osowiec" style="width: 200px; height: 200px;"><img src="Osowiec2.jpg" alt="Twierdza Osowiec" style="width: 200px; height: 200px;">
             </p>
         </div>
     </div>
@@ -111,8 +45,9 @@
             <p>28 czerwca 1914 r. Arcyksiążę Franciszek Ferdynand i jego żona Zofia odwiedzili Sarajewo, podczas tego, była próba zamachu. Zamachowiec próbując zabić
                 dziedzica tronu Austro-Węgierskiego, rzucił bombą, ale nie trafił. Przy wybuchu zostało rannych kilku oficerów. W drodze do szpitala, żeby odwiedzić ich
                 "spotkali" Serba Gavrilla Principa który zastrzelił Franciszka Ferdynanda i jego żonę. Wydarzenie to uważa się, za początek pierwszej wojny światowej.
-                <br><img src="sarajevo.jpg" alt="Zamach" style="width: 300px; height: 180px;">
-                <br><img src="Gavrillo_Princip.jpg" alt="zabojca" style="width: 300px; height: 250px;"><br><i>Gavrillo Princip</i>
+                <br><img src="sarajevo.jpg" alt="Zamach" style="width: 250px; height: 180px;"><img src="Gavrillo_Princip.jpg" alt="zabojca" style="width: 150px; height: 200px;"><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Gavrillo Princip</i>
+
             </p>
         </div>
     </div>
@@ -179,7 +114,7 @@
             <p>zakończona zwycięstwem ZSRR, zatrzymała niemiecki pochód na wschód i zapobiegła upadkowi Związku Radzieckiego.
                 Wojska niemieckie, zaskoczone przez mroźną zimę i pozbawione dobrego zaopatrzenia, zostały odparte przez zgromadzone wojska Armii Czerwonej.
                 W dalszym okresie Armia Czerwona przeprowadziła kontrofensywę na Rżew, będący dobrym przyczółkiem dla przyszłych wypadow na sowiecką stolicę, co doprowadziło do jednej z najkrwawszych bitew na froncie wschodnim - Bitwy pod Rżewem, która pochłonęła życie 770 000 czerwonoarmistów i 330 000 żołnierzy Wehrmachtu.
-            <img src="moskwa.jpg" alt="moskwa" style="width: 300px; height: 200px;"></p>
+            <br><img src="moskwa.jpg" alt="moskwa" style="width: 300px; height: 200px;"></p>
         </div>
     </div>
 
@@ -190,7 +125,7 @@
             <p>Ostrzał z dział pancernika Schlezwig-Holstein Wojskowej Składnicy Tranzytowej na Westerplatte rozpoczął II wojnę światową. 
                 Obrona Westerplatte trwała 7 dni, kiedy ponad 200 polskich żołnierzy stawiało opór przeważającym liczebnie wojskom niemieckim, mającym wsparcie z morza. Obrońcy liczyli na odsiecz Armii "Pomorze", która nigdy nie nadeszła.
                 Po 7 dniach, wskutek braków w amunicji i medykamentach, załoga Westerplatte złożyła kapitulacje i dostała się do niemieckiej niewoli. Henryk Sucharski, dowódca obrony, zmarł w 1946 roku w Neapolu.
-            <br><img src="westerplatte.jpg" alt="westerplatte" style="width:100px; height: 200px;"></p>
+            <br><img src="westerplatte.jpg" alt="westerplatte" style="width:200px; height: 350px;"></p>
         </div>
     </div>
 
@@ -204,214 +139,33 @@
         </div>
     </div>
 
+    <div id="hulajpoleModal" class="modal">
+        <div class="modal-content">
+            <span id="closeHulajpole" class="close-hulajpole">&times;</span>
+            <h2>Machnowszczyzna</h2>
+            <p>parapaństwo istniejące w latach 1918-1921 utworzone w wyniku rewolucji ukraińskiej. Stolicą "państwa" stało się Hulajpole skąd pochodził Nestor Machno.
+                Istniało na zasadzie anarchizmu, więc trudno jest mówić o państwie lub władzy. W marcu 1920 anarchiści zostali wyparci ze stolicy przez siły ruchu Białych, a pod koniec
+                roku 1920 wspólnie z Armią Czerwoną, wróciła ona pod ich kontrolę. Końcem Machnowszczyzny był rok 1921, kiedy ciężko ranny Machno i 77 jego ludzi uciekli przez Rumunię
+                po tym jak rząd sowiecki dokonał egzekucji na kilku wpływowych urzędników.
+                <br><img src="hulajpole.jpg" alt="anarchisci" style="width:200px; height: 300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="machno.jpg" alt="anarchista" style="width: 200px; height: 300px;">
+                <br><i>flaga Machnowców z ich hasłem (tłum. "Śmierć wszystkim, którzy stoją na przeszkodzie zdobycia wolności robotniczemu ludowi") / Nestor Machno (koloryzowane)</i>
+            </p>
+        </div>
+    </div>
+
     <!-- Modalne okno startowe -->
     <div id="startModal" class="modal">
         <div class="modal-content">
             <span id="closeStart" class="close-start">&times;</span>
             <h2>Witamy!</h2>
             <p>Witamy na naszej mapie historycznej!
-                <br>Tu się dowiesz o wydarzeniach związanych z 1 i 2 wojnami światowymi
+                <br>Tu się dowiesz o ważnych bądź ciekawych wydarzeniach z historii świata. Kliknij na jeden z zaznaczonych na mapie punktów, żeby rozpocząć swoją przygodę.
             </p>
         </div>
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Inicjalizacja mapy
-        var map = L.map('map').setView([49.1583, 5.3867], 5); // Środek mapy ustawiony na Europę
-
-        // Dodanie warstwy mapy
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Dodanie punktu na Verdun
-        var verdunMarker = L.marker([49.1583, 5.3867]).addTo(map);
-
-        // Dodanie punktu na Osowiec-Twierdza
-        var osowiecMarker = L.marker([53.483, 22.617]).addTo(map);
-
-        var sarajewoMarker = L.marker([43.866667, 18.416667]).addTo(map);
-
-        var yarmouthMarker = L.marker([52.606, 1.729]).addTo(map);
-
-        var ieperMarker = L.marker([50.852211, 2.877797]).addTo(map);
-
-        var zimowaMarker = L.marker([60.710556, 28.749722]).addTo(map);
-
-        var dunkirkMarker = L.marker([51.033333, 2.366667]).addTo(map);
-
-        var moskwaMarker = L.marker([55.75, 37.616667]).addTo(map);
-
-        var platteMarker = L.marker([54.4075, 18.671389]).addTo(map);
-
-        var ardenyMarker = L.marker([50.6243, 6.13724]).addTo(map);
-
-        // Funkcja obsługująca kliknięcie na marker Verdun
-        verdunMarker.on('click', function () {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-        });
-
-        // Funkcja obsługująca kliknięcie na marker Osowiec-Twierdza
-        osowiecMarker.on('click', function () {
-            var modal = document.getElementById("osowiecModal");
-            modal.style.display = "block";
-        });
-
-        sarajewoMarker.on('click', function () {
-            var modal = document.getElementById("sarajewoModal");
-            modal.style.display = "block";
-        });
-
-        yarmouthMarker.on('click', function () {
-            var modal = document.getElementById("yarmouthModal");
-            modal.style.display = "block";
-        });
-
-        ieperMarker.on('click', function () {
-            var modal = document.getElementById("ieperModal");
-            modal.style.display = "block";
-        });
-
-        zimowaMarker.on('click', function () {
-            var modal = document.getElementById("zimowaModal");
-            modal.style.display = "block";
-        });
-
-        dunkirkMarker.on('click', function () {
-            var modal = document.getElementById("dunkirkModal");
-            modal.style.display = "block";
-        });
-
-        moskwaMarker.on('click', function () {
-            var modal = document.getElementById("moskwaModal");
-            modal.style.display = "block";
-        });
-
-        platteMarker.on('click', function () {
-            var modal = document.getElementById("platteModal");
-            modal.style.display = "block";
-        });
-
-        ardenyMarker.on('click', function () {
-            var modal = document.getElementById("ardenyModal");
-            modal.style.display = "block";
-        });
-
-        // Zamknięcie modalnych okien
-        function closeModal(modal) {
-            modal.style.display = "none";
-        }
-
-        // Zamknięcie modalnego okna Verdun
-        var closeVerdun = document.getElementById("closeVerdun");
-        closeVerdun.onclick = function() {
-            closeModal(document.getElementById("myModal"));
-        }
-
-        // Zamknięcie modalnego okna Osowiec-Twierdza
-        var closeOsowiec = document.getElementById("closeOsowiec");
-        closeOsowiec.onclick = function() {
-            closeModal(document.getElementById("osowiecModal"));
-        }
-
-        var closeSarajewo = document.getElementById("closeSarajewo");
-        closeSarajewo.onclick = function() {
-            closeModal(document.getElementById("sarajewoModal"));
-        }
-
-        var closeYarmouth = document.getElementById("closeYarmouth");
-        closeYarmouth.onclick = function() {
-            closeModal(document.getElementById("yarmouthModal"));
-        }
-
-        var closeIeper = document.getElementById("closeIeper");
-        closeIeper.onclick = function() {
-            closeModal(document.getElementById("ieperModal"));
-        }
-
-        var closeZimowa = document.getElementById("closeZimowa");
-        closeZimowa.onclick = function() {
-            closeModal(document.getElementById("zimowaModal"));
-        }
-
-        var closeDunkirk = document.getElementById("closeDunkirk");
-        closeDunkirk.onclick = function() {
-            closeModal(document.getElementById("dunkirkModal"));
-        }
-
-        var closeMoskwa = document.getElementById("closeMoskwa");
-        closeMoskwa.onclick = function() {
-            closeModal(document.getElementById("moskwaModal"));
-        }
-
-        var closePlatte = document.getElementById("closePlatte");
-        closePlatte.onclick = function() {
-            closeModal(document.getElementById("platteModal"));
-        }
-        
-        var closeArdeny = document.getElementById("closeArdeny");
-        closeArdeny.onclick = function() {
-            closeModal(document.getElementById("ardenyModal"));
-        }
-        // Zamknięcie modalnego okna startowego
-        var closeStart = document.getElementById("closeStart");
-        closeStart.onclick = function() {
-            closeModal(document.getElementById("startModal"));
-        }
-        
-        // Zamknięcie modalnych okien
-        window.onclick = function(event) {
-            var startModal = document.getElementById("startModal");
-            var verdunModal = document.getElementById("myModal");
-            var osowiecModal = document.getElementById("osowiecModal");
-            var sarajewoModal = document.getElementById("sarajewoModal");
-            var yarmouthModal = document.getElementById("yarmouthModal");
-            var ieperModal = document.getElementById("ieperModal");
-            var zimowaModal = document.getElementById("zimowaModal");
-            var dunkirkModal = document.getElementById("dunkirkModal");
-            var moskwaModal = document.getElementById("moskwaModal");
-            var platteModal = document.getElementById("platteModal");
-            var ardenyModal = document.getElementById("ardenyModal");
-
-            if (event.target == startModal) {
-                closeModal(startModal);
-            }
-            if (event.target == verdunModal) {
-                closeModal(verdunModal);
-            }
-            if (event.target == osowiecModal) {
-                closeModal(osowiecModal);
-            }
-            if (event.target == sarajewoModal) {
-                closeModal(sarajewoModal);
-            }
-            if (event.target == yarmouthModal){
-                closeModal(yarmouthModal);
-            }
-            if (event.target == zimowaModal){
-                closeModal(zimowaModal);
-            }
-            if (event.target == dunkirkModal){
-                closeModal(dunkirkModal);
-            }
-            if (event.target == moskwaModal){
-                closeModal(moskwaModal);
-            }
-            if (event.target == platteModal){
-                closeModal(platteModal);
-            }
-            if (event.target == ardenyModal){
-                closeModal(ardenyModal);
-            }
-        }
-
-        // Wyświetlenie modalnego okna przy uruchamianiu strony
-        window.onload = function() {
-            var modal = document.getElementById("startModal");
-            modal.style.display = "block";
-        }
-    </script>
+    <script src="historia.js"></script>
 </body>
 </html>
